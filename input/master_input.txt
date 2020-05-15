@@ -1,0 +1,71 @@
+Falling particles (1 or 0): 1
+Resubmit (1 or 0): 0
+Write LAMMPS file (1 or 0): 0
+LAMMPS file extension: .water
+Input POSCAR name:POSCAR
+Number of different types of surface atoms: 4
+
+Move attempt termination limit: 100
+Maximum scaling factor: 100
+Minimum scaling factor: 1.8
+Minimum z-coordinate: 7.0
+Maximum z-coordinate: 34.0
+Probability of rotation: 0
+Temperature [K]: 300
+Anneal (1 or 0): 0
+Initial temperature [K]: 1000
+Begin at iteration: 0
+End at iteration: 1000
+Max iterations: 0
+Maximum translation distance [A]: 1
+
+Number of different types of fluid molecules: 2
+27 /home/xiaohoz/bin/mcpliq/water.txt
+15 /home/xiaohoz/bin/mcpliq/methanol.txt
+
+######## below is added by Xiaohong Zhang ######
+######## Information of simulation file ########
+#Do not add extra comments after each line
+
+user: xiaohoz
+
+###### Below is for writing LAMMPS input file ####
+Adsorbate_name: c3h7o3
+LMPS_temperature: 300.0
+LMPS_pressure: 1.0	
+
+#number of vacuum POSCAR atom, e.g. Pt+ads
+Total_vac_types: 5
+#a list of the surface atom types
+Surface_atom_type: 1
+# different types of element in POSCAR
+Atom_element: Pt   C_C   O_C   H_C   H_O
+Atom_number:  27   3     3     5     2
+Atom_type:    1    2     3     4     5
+Atom_mass:    195.084 12.0107 15.9994 1.008 1.008
+LJ_epsilon:   0.08 0.066 0.17 0.03 0.0	
+LJ_sigma:     2.754 3.5 3.07 2.5 0.0
+
+Water_type: TIP3PCHARMM
+Frame_num: 5
+########
+
+
+****This is an example file that's been set up for random water placement and LAMMPS data file generation with the provided Pt surface and TIP3P water****
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
