@@ -246,12 +246,12 @@ class VASP(ReadInput):
 			elem = self.elem_surface['elem'] + self.elem_sol['elem']
 
 		for e in elem:
-			if not os.path.isfile('/curium/VASP/PPs/120423/PBE/'+e+'/POTCAR'):
+			if not os.path.isfile('/zfs/curium/VASP/PPs/120423/PBE/'+e+'/POTCAR'):
 				sys.exit('\nERROR: Incorrect element symbol: ' + e + '\n')
 
 		with open(os.path.join(path, 'POTCAR'), 'w') as f:
 			for e in elem:
-				with open('/curium/VASP/PPs/120423/PBE/'+e+'/POTCAR', 'r') as inf:
+				with open('/zfs/curium/VASP/PPs/120423/PBE/'+e+'/POTCAR', 'r') as inf:
 					f.write(inf.read()) # delete previous 'r'
 
 
