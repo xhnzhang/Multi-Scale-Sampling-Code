@@ -271,11 +271,11 @@ class VASP(ReadInput):
 			sys.exit('\nERROR: Incorrect queue choice.\n')
 
 		if version == 'cpu':
-			resource = 'select=1:ncpus=20:mpiprocs=20:mem=120gb,'
+			resource = 'select=1:ncpus=20:mpiprocs=20:interconnect=fdr:mem=120gb,'
 			module = 'intel/16.0 openmpi/1.10.3'
 			exe_path = '/curium/VASP/vasp.5.4.4-cpu-multi/vasp_std'
 		elif version == 'gpu':
-			resource = 'select=1:ncpus=20:mpiprocs=20:ngpus=2:gpu_model=k40:mem=120gb,'
+			resource = 'select=1:ncpus=20:mpiprocs=20:interconnect=fdr:ngpus=2:gpu_model=k40:mem=120gb,'
 			module = 'intel/16.0 cuda-toolkit/7.5.18'
 			exe_path = '/curium/VASP-GPU5.4.1.05Feb16/executable/vasp_gpu_ph12p'
 		elif version == 'neb':
